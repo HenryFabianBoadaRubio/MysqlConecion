@@ -17,7 +17,20 @@ export const getAll = async()=>{
 }
 
 export const getAllJobTitle = async({cargo} = {cargo: "Sales Rep"})=>{
-    const [result] = await connection.execute(`SELECT CONCAT(firstName," ", lastName) as 'fullName' FROM employees where jobTitle = ?`, [cargo] );
+    const [result] = await connection.execute(`
+    SELECT CONCAT(firstName,' ', lastName) as 'fullName' FROM employees where jobTitle = ?`, [cargo] );
     result["count"] = result.length;
+    return result;
+}
+
+
+
+
+// MIS CONSULTAS 
+
+//2. **Lista de empleados que trabajan en una oficina específica (por ejemplo, '1'):**
+
+export const getEmployeesOffice= async({office} = {office: 1})=>{
+    const[result] = await connection.execute(`SELECT lastName, firstName FROM employees WHERE officeCode = ?;`, [office]);
     return result;
 }
