@@ -20,7 +20,8 @@ import { getAll,
 
 
 import { getAllProductosInStock,
-        getAllProductsCountStock
+        getAllProductsCountStock,
+        getAllProductsPriceOfBuy
 
 } from "./js/module/product.js";
 
@@ -36,6 +37,12 @@ import { getAllOfficesAndCountry } from "./js/module/offices.js";
 // console.log(await getAllProductsCountStock());// 6
 // console.log(await getAllEmployeesWithBoss());// 7 
 // console.log(await getAllOfficesAndCountry());// 8 
-console.log(await getAllClientsAndCity({city: "Madrid"}));// 9 
+// console.log(await getAllClientsAndCity({city: "Madrid"}));// 9 
+console.log(await getAllProductsPriceOfBuy());// 10 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
+// console.log(await getCustomer({customerNumber: 146}));// 3 
+// console.log(await getCustomer({customerNumber: 146}));// 3 
+// console.log(await getCustomer({customerNumber: 146}));// 3 
+// console.log(await getCustomer({customerNumber: 146}));// 3 
+
