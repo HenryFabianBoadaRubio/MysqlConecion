@@ -30,7 +30,8 @@ import { getAllProductosInStock,
 import { getAllPayments } from "./js/module/payments.js";
 
 import { getAllOrders,
-     getAllOrdersAndClients 
+     getAllOrdersAndClients,
+     getAllCountOrdersAndProducts
 } from "./js/module/orders.js";
 
 import { getAllOfficesAndCountry } from "./js/module/offices.js";
@@ -48,7 +49,7 @@ import { getAllOfficesAndCountry } from "./js/module/offices.js";
 //MULTITABLAS
 // console.log(await getAllOrdersAndClients({customerNumber: 496}));// 1 
 // console.log(await getAllEmployeesAndOffices());// 2 
-console.log(await getAllClientsAndSalesRepresentative());// 3 
-// console.log(await getCustomer({customerNumber: 146}));// 3 
+// console.log(await getAllClientsAndSalesRepresentative());// 3 
+console.log(await getAllCountOrdersAndProducts());// 4 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
 
