@@ -17,3 +17,10 @@ export const getCustomer = async({customerNumber} = {customerNumber: 101})=>{
     const [result] = await connection.execute(`SELECT customerName, phone, contactLastName  FROM customers  WHERE customerNumber= ?;`, [customerNumber]);
     return result;
 }
+
+
+// 9. **Listar todos los clientes en una ciudad específica (por ejemplo, 'Madrid'):**
+export const getAllClientsAndCity = async ({city} = {city:Madrid}) => {
+    const [result]= await connection.execute(` select customerNumber,customerName,contactLastName,phone,city FROM customers WHERE city =?;`, [city]);
+    return result; 
+}
