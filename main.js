@@ -13,7 +13,8 @@ import { getAll,
     getAllJobTitle,
 
 
-    getEmployeesOffice
+    getEmployeesOffice,
+    getAllEmployeesWithBoss
 } from "./js/module/employees.js";
 
 
@@ -28,9 +29,9 @@ import { getAllOrders } from "./js/module/orders.js";
 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
 // console.log(await getAllPayments({payment: 146}));// 4 
-console.log(await getAllOrders());// 5
+// console.log(await getAllOrders());// 5
 // console.log(await getAllProductsCountStock());// 6
-// console.log(await getCustomer({customerNumber: 146}));// 3 
+console.log(await getAllEmployeesWithBoss());// 7 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
