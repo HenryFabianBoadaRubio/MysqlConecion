@@ -24,3 +24,11 @@ export const getAllClientsAndCity = async ({city} = {city:Madrid}) => {
     const [result]= await connection.execute(` select customerNumber,customerName,contactLastName,phone,city FROM customers WHERE city =?;`, [city]);
     return result; 
 }
+
+
+//multitabla
+// 3. **Listar todos los clientes junto con su representante de ventas:**
+export const getAllClientsAndSalesRepresentative = async () => {
+    const [result] = await connection.query(`SELECT c.customerName,c.contactLastName,c.city,c.country,c.salesRepEmployeeNumber,e.lastName,e.firstName FROM customers c INNER join employees e ON c.salesRepEmployeeNumber= e.employeeNumber;`);
+    return result;
+}

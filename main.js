@@ -5,7 +5,8 @@ import {
 
 
     getCustomer,
-    getAllClientsAndCity
+    getAllClientsAndCity,
+    getAllClientsAndSalesRepresentative
 } from "./js/module/customers.js";
 
 import { getAll, 
@@ -46,8 +47,8 @@ import { getAllOfficesAndCountry } from "./js/module/offices.js";
 
 //MULTITABLAS
 // console.log(await getAllOrdersAndClients({customerNumber: 496}));// 1 
-console.log(await getAllEmployeesAndOffices());// 2 
-// console.log(await getCustomer({customerNumber: 146}));// 3 
+// console.log(await getAllEmployeesAndOffices());// 2 
+console.log(await getAllClientsAndSalesRepresentative());// 3 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
 
