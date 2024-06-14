@@ -27,7 +27,9 @@ import { getAllProductosInStock,
 
 import { getAllPayments } from "./js/module/payments.js";
 
-import { getAllOrders } from "./js/module/orders.js";
+import { getAllOrders,
+     getAllOrdersAndClients 
+} from "./js/module/orders.js";
 
 import { getAllOfficesAndCountry } from "./js/module/offices.js";
 
@@ -38,9 +40,11 @@ import { getAllOfficesAndCountry } from "./js/module/offices.js";
 // console.log(await getAllEmployeesWithBoss());// 7 
 // console.log(await getAllOfficesAndCountry());// 8 
 // console.log(await getAllClientsAndCity({city: "Madrid"}));// 9 
-console.log(await getAllProductsPriceOfBuy());// 10 
-// console.log(await getCustomer({customerNumber: 146}));// 3 
-// console.log(await getCustomer({customerNumber: 146}));// 3 
+// console.log(await getAllProductsPriceOfBuy());// 10 
+
+
+//MULTITABLAS
+console.log(await getAllOrdersAndClients({customerNumber: 496}));// 1 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
 // console.log(await getCustomer({customerNumber: 146}));// 3 
