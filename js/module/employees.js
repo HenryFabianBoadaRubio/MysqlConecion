@@ -40,3 +40,11 @@ export const getAllEmployeesWithBoss = async()=>{
     const [result] =await connection.query(` SELECT DISTINCT e.employeeNumber as numeroEmpleado,e.lastName as apellidoEmpleado,e.firstName as nombreEmpleado,e.extension,e.officeCode,e.jobTitle,e.reportsTo,a.lastName as nombreJefe FROM employees e INNER JOIN employees a ON e.reportsTo =a.employeeNumber;`)
     return result;
 }
+
+
+//multitablas
+// 2. **Listar todos los empleados junto con la oficina en la que trabajan:**
+export const getAllEmployeesAndOffices =async()=>{
+    const [result] =await connection.query(`SELECT e.lastName, e.firstName, e.email,e.officeCode,o.city,o.phone,o.state,o.postalCode from employees e INNER JOIN offices o ON e.officeCode= o.officeCode;`);
+    return result;
+}
